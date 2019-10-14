@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pl" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>  <!-- polskie znaku -->
+    <title style="margin-left: 750px">Byte Conversion</title>
+
+
+</head>
+<body>
+<div style="margin-left: 750px">
+    <h1>Sprawdzanie bajtów występujących w pliku</h1>
+
+    <form action="/checkByte">
+        <div class="title">Podaj adres pliku. Pamietaj ze format ma być np. C:\programFiles\plik
+            <br> <br>
+            Adres
+            <br>
+            <input type="text" name="sciezka" th:text="${sciezka}">
+
+        </div>
+        <br> <br>
+        <div class="title">Podaj szukane rozszerzenie\plik</div>
+
+
+        <input type="text" name="rozszerzenie" th:text="${rozszerzenie}">
+
+        <br><br>
+        <!--<select name="unitheight" id="unitheight" style="text-transform:capitalize;">-->
+        <!--<option value="cm" th:selected="${unitheight=='cm'}">cm</option>-->
+        <!--<option value="in" th:selected="${unitheight=='in'}">in</option>-->
+        <!--</select>-->
+        <br><br>
+
+        <!--<div class="title">Podaj szukana wartość bitu</div>-->
+        <!--<input type="number" name="bajt_wejsciowy" th:value="${bajt_wejsciowy}" max="999" min="0"-->
+        <!--&gt;-->
+        <!--<br><br>-->
+
+        <!--<div class="title">Podaj wartośc bajtu na która chcesz zamienic</div>-->
+        <!--<input type="number" name="bajt_wyjsciowy" th:value="${bajt_wyjsciowy}" max="999" min="0"-->
+        <!--&gt;-->
+
+
+        <input type="submit" name="submit" value="Sprawdzenie" class="btn-login"><br>
+    </form>
+    <tr>
+        <p th:text="${change}" class="title"></p>
+
+
+    </tr>
+    <a th:href="@{/}"><i class="fa fa-long-arrow-left" aria-hidden="true"></i>back to home page</a>
+</div>
+</body>
+</html>
